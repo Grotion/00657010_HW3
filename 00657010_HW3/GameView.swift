@@ -231,7 +231,6 @@ struct GameView: View
         .scaledToFill()
         .opacity(0.3))
         .clipped()
-        //.edgesIgnoringSafeArea(.all)
     }
 }
 
