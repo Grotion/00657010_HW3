@@ -33,7 +33,6 @@ struct GameView: View
     {
         VStack
         {
-            
             ProfileDetail(isProfile: self.$isProfile, name: self.$name, birthday: self.$birthday, age: self.$age, isGender: self.$isGender, selectGender: self.$selectGender)
             Text("Instruction: Tap the image to make him/her angry!")
             .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
@@ -100,7 +99,7 @@ struct GameView: View
                     .resizable()
                     .scaledToFill()
                     .frame(width:40, height:200)
-                    .padding(.leading, 10)
+                    .padding(.leading, 15)
                 }
                 else if self.hitcount[self.selectedIndex] >= 10 && self.hitcount[self.selectedIndex] < 20
                 {
@@ -109,7 +108,7 @@ struct GameView: View
                     .resizable()
                     .scaledToFill()
                     .frame(width:40, height:200)
-                    .padding(.leading, 10)
+                    .padding(.leading, 15)
                 }
                 else if self.hitcount[self.selectedIndex] >= 20 && self.hitcount[self.selectedIndex] < 30
                 {
@@ -118,6 +117,7 @@ struct GameView: View
                     .resizable()
                     .scaledToFill()
                     .frame(width:40, height:200)
+                    .padding(.leading, 15)
                 }
                 else if self.hitcount[self.selectedIndex] >= 30 && self.hitcount[self.selectedIndex] < 40
                 {
@@ -126,6 +126,7 @@ struct GameView: View
                     .resizable()
                     .scaledToFill()
                     .frame(width:40, height:200)
+                    .padding(.leading, 15)
                 }
                 else if self.hitcount[self.selectedIndex] >= 40 && self.hitcount[self.selectedIndex] < 50
                 {
@@ -134,6 +135,7 @@ struct GameView: View
                     .resizable()
                     .scaledToFill()
                     .frame(width:40, height:200)
+                    .padding(.leading, 15)
                 }
                 else if self.hitcount[self.selectedIndex] >= 50
                 {
@@ -142,6 +144,7 @@ struct GameView: View
                     .resizable()
                     .scaledToFill()
                     .frame(width:40, height:200)
+                    .padding(.leading, 15)
                 }
                 
 
@@ -173,6 +176,9 @@ struct GameView: View
             
             BrightnessSlider(brightnessAmount: self.$brightnessAmount)
             ZoomSlider(scale: self.$scale)
+            
+            Spacer()
+            .frame(height: 100)
             
             HStack
             {
@@ -217,7 +223,15 @@ struct GameView: View
                         
                 }
             }
+            Spacer()
+            .frame(height: 50)
         }
+        .background(Image("gameBackground")
+        .resizable()
+        .scaledToFill()
+        .opacity(0.3))
+        .clipped()
+        //.edgesIgnoringSafeArea(.all)
     }
 }
 
