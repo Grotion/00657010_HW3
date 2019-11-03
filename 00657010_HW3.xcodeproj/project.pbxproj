@@ -14,10 +14,12 @@
 		4A2BB9C5236D297A004FDFAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A2BB9C4236D297A004FDFAD /* Assets.xcassets */; };
 		4A2BB9C8236D297A004FDFAD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A2BB9C7236D297A004FDFAD /* Preview Assets.xcassets */; };
 		4A2BB9CB236D297A004FDFAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A2BB9C9236D297A004FDFAD /* LaunchScreen.storyboard */; };
+		4A2BB9D3236D29C1004FDFAD /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2BB9D2236D29C1004FDFAD /* IntroView.swift */; };
+		4A2BB9D5236D6BDE004FDFAD /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2BB9D4236D6BDE004FDFAD /* GameView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4A2BB9B8236D2979004FDFAD /* 00657010_HW3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 00657010_HW3.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A2BB9B8236D2979004FDFAD /* Angry Man.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Angry Man.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A2BB9BB236D2979004FDFAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A2BB9BD236D2979004FDFAD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		4A2BB9C0236D2979004FDFAD /* _0657010_HW3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = _0657010_HW3.xcdatamodel; sourceTree = "<group>"; };
@@ -26,6 +28,8 @@
 		4A2BB9C7236D297A004FDFAD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4A2BB9CA236D297A004FDFAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4A2BB9CC236D297A004FDFAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A2BB9D2236D29C1004FDFAD /* IntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
+		4A2BB9D4236D6BDE004FDFAD /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,7 +54,7 @@
 		4A2BB9B9236D2979004FDFAD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4A2BB9B8236D2979004FDFAD /* 00657010_HW3.app */,
+				4A2BB9B8236D2979004FDFAD /* Angry Man.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -61,6 +65,8 @@
 				4A2BB9BB236D2979004FDFAD /* AppDelegate.swift */,
 				4A2BB9BD236D2979004FDFAD /* SceneDelegate.swift */,
 				4A2BB9C2236D2979004FDFAD /* ContentView.swift */,
+				4A2BB9D2236D29C1004FDFAD /* IntroView.swift */,
+				4A2BB9D4236D6BDE004FDFAD /* GameView.swift */,
 				4A2BB9C4236D297A004FDFAD /* Assets.xcassets */,
 				4A2BB9C9236D297A004FDFAD /* LaunchScreen.storyboard */,
 				4A2BB9CC236D297A004FDFAD /* Info.plist */,
@@ -95,7 +101,7 @@
 			);
 			name = 00657010_HW3;
 			productName = 00657010_HW3;
-			productReference = 4A2BB9B8236D2979004FDFAD /* 00657010_HW3.app */;
+			productReference = 4A2BB9B8236D2979004FDFAD /* Angry Man.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -151,7 +157,9 @@
 			files = (
 				4A2BB9BC236D2979004FDFAD /* AppDelegate.swift in Sources */,
 				4A2BB9BE236D2979004FDFAD /* SceneDelegate.swift in Sources */,
+				4A2BB9D3236D29C1004FDFAD /* IntroView.swift in Sources */,
 				4A2BB9C3236D2979004FDFAD /* ContentView.swift in Sources */,
+				4A2BB9D5236D6BDE004FDFAD /* GameView.swift in Sources */,
 				4A2BB9C1236D2979004FDFAD /* _0657010_HW3.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,7 +305,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "-23.-0657010-HW3";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Angry Man";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -316,7 +324,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "-23.-0657010-HW3";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Angry Man";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
