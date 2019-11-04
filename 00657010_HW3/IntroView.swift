@@ -31,8 +31,9 @@ struct IntroView: View
     {
         VStack
         {
-            Spacer()
-            .frame(height: 100)
+            //for iphone11 max pro
+            //Spacer()
+            //.frame(height: 100)
             GameNameText()
             if isProfile
             {
@@ -152,16 +153,15 @@ struct IntroView: View
             {
                 GameView(showGamePage: self.$showGamePage, isProfile: self.$isProfile, name: self.$name, birthday: self.$birthday, age: self.$age, isGender: self.$isGender, selectGender: self.$selectGender)
             }
-            .padding(EdgeInsets(top: 30, leading: 0, bottom: 0, trailing: 0))
-            Spacer()
-            .frame(height: 30)
+            //for iphone11 nax pro
+            //.padding(EdgeInsets(top: 10, leading: 0, bottom: 0, trailing: 0))
         }
         .background(Image("profileBackground")
         .resizable()
         .scaledToFill()
-        .opacity(0.5))
+        .opacity(0.5)
         .clipped()
-        .edgesIgnoringSafeArea(.all)
+        .edgesIgnoringSafeArea(.all))
     }
 }
 

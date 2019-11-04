@@ -67,7 +67,7 @@ struct GameView: View
                         .scaledToFit()
                         .scaleEffect(scale)
                         .brightness(self.brightnessAmount)
-                        .frame(width:300, height:200)
+                        .frame(width:280, height:200)
                     }
                     else
                     {
@@ -77,7 +77,7 @@ struct GameView: View
                         .scaledToFit()
                         .scaleEffect(scale)
                         .brightness(self.brightnessAmount)
-                        .frame(width:300, height:200)
+                        .frame(width:280, height:200)
                     }
                 }
                 .alert(isPresented: $showHitAlert)
@@ -99,7 +99,9 @@ struct GameView: View
                     .resizable()
                     .scaledToFill()
                     .frame(width:40, height:200)
-                    .padding(.leading, 15)
+                    //for iphone11 max pro
+                    //.padding(.leading, 15)
+                    .padding(.leading, 10)
                 }
                 else if self.hitcount[self.selectedIndex] >= 10 && self.hitcount[self.selectedIndex] < 20
                 {
@@ -108,7 +110,9 @@ struct GameView: View
                     .resizable()
                     .scaledToFill()
                     .frame(width:40, height:200)
-                    .padding(.leading, 15)
+                    //for iphone11 max pro
+                    //.padding(.leading, 15)
+                    .padding(.leading, 10)
                 }
                 else if self.hitcount[self.selectedIndex] >= 20 && self.hitcount[self.selectedIndex] < 30
                 {
@@ -117,7 +121,9 @@ struct GameView: View
                     .resizable()
                     .scaledToFill()
                     .frame(width:40, height:200)
-                    .padding(.leading, 15)
+                    //for iphone11 max pro
+                    //.padding(.leading, 15)
+                    .padding(.leading, 10)
                 }
                 else if self.hitcount[self.selectedIndex] >= 30 && self.hitcount[self.selectedIndex] < 40
                 {
@@ -126,7 +132,9 @@ struct GameView: View
                     .resizable()
                     .scaledToFill()
                     .frame(width:40, height:200)
-                    .padding(.leading, 15)
+                    //for iphone11 max pro
+                    //.padding(.leading, 15)
+                    .padding(.leading, 10)
                 }
                 else if self.hitcount[self.selectedIndex] >= 40 && self.hitcount[self.selectedIndex] < 50
                 {
@@ -135,7 +143,9 @@ struct GameView: View
                     .resizable()
                     .scaledToFill()
                     .frame(width:40, height:200)
-                    .padding(.leading, 15)
+                    //for iphone11 max pro
+                    //.padding(.leading, 15)
+                    .padding(.leading, 10)
                 }
                 else if self.hitcount[self.selectedIndex] >= 50
                 {
@@ -144,7 +154,9 @@ struct GameView: View
                     .resizable()
                     .scaledToFill()
                     .frame(width:40, height:200)
-                    .padding(.leading, 15)
+                    //for iphone11 max pro
+                    //.padding(.leading, 15)
+                    .padding(.leading, 10)
                 }
                 
 
@@ -177,8 +189,10 @@ struct GameView: View
             BrightnessSlider(brightnessAmount: self.$brightnessAmount)
             ZoomSlider(scale: self.$scale)
             
-            Spacer()
-            .frame(height: 100)
+            
+            //for iphone11 max pro
+            //Spacer()
+            //.frame(height: 100)
             
             HStack
             {
@@ -229,8 +243,10 @@ struct GameView: View
         .background(Image("gameBackground")
         .resizable()
         .scaledToFill()
-        .opacity(0.3))
-        .clipped()
+        .opacity(0.3)
+        //for iphoneXS
+        .edgesIgnoringSafeArea(.all)
+        .clipped())
     }
 }
 
