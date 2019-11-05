@@ -33,10 +33,22 @@ struct GameView: View
     {
         VStack
         {
-            ProfileDetail(isProfile: self.$isProfile, name: self.$name, birthday: self.$birthday, age: self.$age, isGender: self.$isGender, selectGender: self.$selectGender)
-            Text("Instruction: Tap the image to make him/her angry!")
-            .padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
-            .font(Font.system(size: 15))
+            Group
+            {
+                //for iphoneXS
+                Spacer()
+                .frame(height: 30)
+                ProfileDetail(isProfile: self.$isProfile, name: self.$name, birthday: self.$birthday, age: self.$age, isGender: self.$isGender, selectGender: self.$selectGender)
+            }
+
+            //for iphone11 pro max
+            //Text("Instruction: Tap the image to make him/her angry!")
+            //for iphoneXS
+            Group
+            {
+                Text("Instruction")
+                Text("Tap the image to make him/her angry!")
+            }
             if hitcount[selectedIndex] < 2
             {
                 Text("You've hit \(pickName[selectedIndex]) \(hitcount[selectedIndex]) time!")
@@ -44,7 +56,7 @@ struct GameView: View
             }
             else
             {
-                Text("You've hit \(pickName[selectedIndex]) \(hitcount[selectedIndex]) time!")
+                Text("You've hit \(pickName[selectedIndex]) \(hitcount[selectedIndex]) times!")
                 .font((Font.system(size: 26)))
             }
             HStack
@@ -99,7 +111,7 @@ struct GameView: View
                     .resizable()
                     .scaledToFill()
                     .frame(width:40, height:200)
-                    //for iphone11 max pro
+                    //for iphone11 pro max
                     //.padding(.leading, 15)
                     .padding(.leading, 10)
                 }
@@ -110,7 +122,7 @@ struct GameView: View
                     .resizable()
                     .scaledToFill()
                     .frame(width:40, height:200)
-                    //for iphone11 max pro
+                    //for iphone11 pro max
                     //.padding(.leading, 15)
                     .padding(.leading, 10)
                 }
@@ -121,7 +133,7 @@ struct GameView: View
                     .resizable()
                     .scaledToFill()
                     .frame(width:40, height:200)
-                    //for iphone11 max pro
+                    //for iphone11 pro max
                     //.padding(.leading, 15)
                     .padding(.leading, 10)
                 }
@@ -132,7 +144,7 @@ struct GameView: View
                     .resizable()
                     .scaledToFill()
                     .frame(width:40, height:200)
-                    //for iphone11 max pro
+                    //for iphone11 pro max
                     //.padding(.leading, 15)
                     .padding(.leading, 10)
                 }
@@ -143,7 +155,7 @@ struct GameView: View
                     .resizable()
                     .scaledToFill()
                     .frame(width:40, height:200)
-                    //for iphone11 max pro
+                    //for iphone11 pro max
                     //.padding(.leading, 15)
                     .padding(.leading, 10)
                 }
@@ -154,7 +166,7 @@ struct GameView: View
                     .resizable()
                     .scaledToFill()
                     .frame(width:40, height:200)
-                    //for iphone11 max pro
+                    //for iphone11 pro max
                     //.padding(.leading, 15)
                     .padding(.leading, 10)
                 }
@@ -190,9 +202,12 @@ struct GameView: View
             ZoomSlider(scale: self.$scale)
             
             
-            //for iphone11 max pro
+            //for iphone11 pro max
             //Spacer()
             //.frame(height: 100)
+            //for iphoneXS
+            Spacer()
+            .frame(height: 50)
             
             HStack
             {
