@@ -46,8 +46,9 @@ struct GameView: View
             //for iphoneXS
             Group
             {
-                Text("Instruction")
+                //Text("Instruction")
                 Text("Tap the image to make him/her angry!")
+                .padding(EdgeInsets(top: 10, leading: 0, bottom: 0, trailing: 0))
             }
             if hitcount[selectedIndex] < 2
             {
@@ -59,7 +60,7 @@ struct GameView: View
             {
                 Text("You've hit \(pickName[selectedIndex]) \(hitcount[selectedIndex]) times!")
                 .font((Font.system(size: 26)))
-                .padding(EdgeInsets(top: 20, leading: 0, bottom: 10, trailing: 0))
+                .padding(EdgeInsets(top: 20, leading: 0, bottom: 0, trailing: 0))
             }
             HStack
             {
@@ -209,7 +210,7 @@ struct GameView: View
             //.frame(height: 100)
             //for iphoneXS
             Spacer()
-            .frame(height: 50)
+            .frame(height: 80)
             
             HStack
             {
@@ -254,8 +255,12 @@ struct GameView: View
                         
                 }
             }
+            //for iPhone11 pro max
+            //Spacer()
+            //.frame(height: 50)
+            //for iPhoneXS
             Spacer()
-            .frame(height: 50)
+            .frame(height: 30)
         }
         .background(Image("gameBackground")
         .resizable()
