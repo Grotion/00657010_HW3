@@ -53,11 +53,13 @@ struct GameView: View
             {
                 Text("You've hit \(pickName[selectedIndex]) \(hitcount[selectedIndex]) time!")
                 .font((Font.system(size: 26)))
+                .padding(EdgeInsets(top: 20, leading: 0, bottom: 0, trailing: 0))
             }
             else
             {
                 Text("You've hit \(pickName[selectedIndex]) \(hitcount[selectedIndex]) times!")
                 .font((Font.system(size: 26)))
+                .padding(EdgeInsets(top: 20, leading: 0, bottom: 10, trailing: 0))
             }
             HStack
             {
@@ -177,7 +179,7 @@ struct GameView: View
             VStack
             {
                 Text("Select a person you want to hit")
-                .padding(EdgeInsets(top: 30, leading: 0, bottom: 10, trailing: 0))
+                .padding(EdgeInsets(top: 20, leading: 0, bottom: 0, trailing: 0))
                 Picker(selection: $selectedIndex, label: Text("Select a person you want to hit"))
                 {
                     /*ForEach(pics, id: \.self)
